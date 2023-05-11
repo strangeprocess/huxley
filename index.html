@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- FONTS -->
-    <link rel="stylesheet" href="https://use.typekit.net/dhb7uvb.css" />
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/dhb7uvb.css" /> -->
     <!-- FAVICONS -->
     <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
@@ -15,6 +15,22 @@
     <meta name="theme-color" content="#ffffff" />
 
     <style>
+      @font-face {
+        font-family: "bn_minayregular";
+        src: url("fonts/1--huxminay-webfont.woff2") format("woff2"),
+          url("fonts/1--huxminay-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "bn_ciceroregular";
+        src: url("fonts/2--huxcicero-webfont.woff2") format("woff2"),
+          url("fonts/2--huxcicero-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -22,7 +38,7 @@
       }
 
       body {
-        font-family: Arial, sans-serif;
+        font-family: "bn_ciceroregular", sans-serif;
         background-color: #ffffff;
       }
 
@@ -31,6 +47,14 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px 30px;
+      }
+      
+      #wavey{
+          width: 100%; 
+          text-align: center;
+          padding-top: 50px;
+          padding-bottom: 20px;
+          
       }
 
       header h2 {
@@ -42,7 +66,7 @@
         line-height: 60px;
         color: #333;
         text-transform: uppercase;
-        font-family: "short-films", sans-serif;
+        font-family: "bn_minayregular", sans-serif;
         font-weight: 500;
         font-style: normal;
       }
@@ -50,16 +74,29 @@
       h2 {
         font-size: 22px;
         line-height: 22px;
-        color: #555;
+        color: #333;
         text-transform: uppercase;
         font-family: "menca", sans-serif;
         font-weight: 400;
         font-style: normal;
 
-        font-family: "short-films", sans-serif;
+        font-family: "bn_ciceroregular", sans-serif;
         font-weight: 500;
         font-style: normal;
       }
+      
+      h2.sub {
+          font-size: 16.4px;
+      }
+      
+      h2.contact {
+       float: right;
+       position: absolute;
+       top: 25px;
+       right: 30px;
+      }
+    
+
 
       h3 {
         font-size: 40px;
@@ -70,7 +107,7 @@
         font-weight: 700;
         font-style: normal;
 
-        font-family: "short-films", sans-serif;
+        font-family: "bn_ciceroregular", sans-serif;
         font-weight: 500;
         font-style: normal;
       }
@@ -174,17 +211,26 @@
         margin: 0 5px;
         font-size: 18px;
       }
+      
+      @media only screen and (max-width: 350px) {
+       h2.contact {
+          float: unset;
+          position: unset;
+      }
+      }
+      
+      
     </style>
-    <title>Huxley • Artist Management</title>
+    <title>Huxley Management</title>
   </head>
   <body>
     <header>
       <h1>Huxley</h1>
 
-      <h2>Artist Management</h2>
+      <h2 class="sub">Artist Management</h2>
 
-      <h2>
-        <a href="mailto:noah@huxleymgmt.com" class="contact">Contact</a>
+      <h2 class="contact">
+        <a href="mailto:noah@huxleymgmt.com">Contact</a>
       </h2>
     </header>
     <section class="photo-grid">
@@ -242,5 +288,13 @@
       </a>
       <!-- END OF ARTIST BOX -->
     </section>
+    
+    <div id="wavey">
+      <a href="https://www.wavyhaze.com/" target="_blank"
+        ><img class="wh_logo" src="img/wavey_haze.png" alt="Wavey Haze"
+      /></a>
+    </div>
+    
+    
   </body>
 </html>
